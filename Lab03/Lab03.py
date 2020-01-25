@@ -9,8 +9,8 @@
 users_input = input("Введите целое число: ")
 
 try:
-   val = int(users_input)
-   print("Вы ввели число: ", val)
+    val = int(users_input)
+    print("Вы ввели число: ", val)
 except ValueError:
     try:
         val = float(users_input)
