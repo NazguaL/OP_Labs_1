@@ -3,7 +3,7 @@
 #     2. Задание
 # Создать программу, которая выводит на экран ФИО исполнителя с помощью линий, используя ручки и разные цвета.
 
-from turtle import Screen, Turtle, Vec2D
+from turtle import Turtle
 
 t = Turtle()
 t.screen.setup(700, 100)
@@ -136,7 +136,7 @@ t.up()
 t.goto(175, -25)
 t.down()
 t.left(45)
-t.fd(25*1.4)
+t.fd(25*1.42)
 t.right(90)
 t.fd(25*1.4)
 t.up()
