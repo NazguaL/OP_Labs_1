@@ -4,7 +4,7 @@
 
 import math
 
-users_input = input("Введите значение целое число: ")
+users_input = input("Введите значение числа X: ")
 
 try:
     x = float(users_input)

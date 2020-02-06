@@ -5,6 +5,7 @@
 # - найти сумму элементов, расположенных на побочной диагонали и выше ее;
 
 import pickle
+from random import random
 
 print("Переупорядочить массив:")
 desc_list = []
@@ -27,7 +28,7 @@ print(asc_list)
 print()
 
 print("Найти сумму элементов, расположенных на побочной диагонали матрицы N=12 и выше ее")
-from random import random
+
 N = 12
 matrix = []
 for i in range(N):

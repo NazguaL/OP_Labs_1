@@ -1,6 +1,5 @@
 from turtle import Screen, Turtle, Vec2D
 
-COLORMAP = ['blue', 'red', 'green', 'white', 'yellow', 'violet', 'orange']
 
 def drawTriangle(points, turtle):
     # turtle.fillcolor(color)
@@ -15,8 +14,10 @@ def drawTriangle(points, turtle):
     turtle.goto(points[0])
     # turtle.end_fill()
 
+
 def getMid(p1, p2):
     return(p1 + p2) * 0.5
+
 
 def sierpinski(points, degree, turtle):
     drawTriangle(points, turtle)
@@ -28,14 +29,15 @@ def sierpinski(points, degree, turtle):
     sierpinski([getMid(points[0], points[1]), points[1], getMid(points[1], points[2])], degree - 1, turtle)
     sierpinski([getMid(points[0], points[2]), getMid(points[2], points[1]), points[2],], degree - 1, turtle)
 
+
 def main():
     screen = Screen()
-    yertle = Turtle()
+    turtle = Turtle()
 
     myPoints = [Vec2D(-200, -100), Vec2D(0, 200), Vec2D(200, -100)]
-    sierpinski(myPoints, 5, yertle)
+    sierpinski(myPoints, 5, turtle)
 
-    yertle.hideturtle()
+    turtle.hideturtle()
     screen.exitonclick()
 
 main()
