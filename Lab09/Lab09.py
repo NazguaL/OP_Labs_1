@@ -2,17 +2,15 @@ from turtle import Screen, Turtle, Vec2D
 
 
 def drawTriangle(points, turtle):
-    # turtle.fillcolor(color)
 
     turtle.up()
     turtle.goto(points[0])
     turtle.down()
 
-    turtle.begin_fill()
     turtle.goto(points[1])
     turtle.goto(points[2])
     turtle.goto(points[0])
-    # turtle.end_fill()
+
 
 
 def getMid(p1, p2):
@@ -25,9 +23,13 @@ def sierpinski(points, degree, turtle):
     if degree < 1:
         return
 
-    sierpinski([points[0], getMid(points[0], points[1]), getMid(points[0], points[2])], degree - 1, turtle)
+    # sierpinski([points[0], getMid(points[0], points[1]), getMid(points[0], points[2])], degree - 1, turtle)
+    # sierpinski([getMid(points[0], points[1]), points[1], getMid(points[1], points[2])], degree - 1, turtle)
+    # sierpinski([getMid(points[0], points[2]), getMid(points[2], points[1]), points[2],], degree - 1, turtle)
+
+    sierpinski([getMid(points[0], points[2]), getMid(points[2], points[1]), points[2], ], degree - 1, turtle)
     sierpinski([getMid(points[0], points[1]), points[1], getMid(points[1], points[2])], degree - 1, turtle)
-    sierpinski([getMid(points[0], points[2]), getMid(points[2], points[1]), points[2],], degree - 1, turtle)
+    sierpinski([points[0], getMid(points[0], points[1]), getMid(points[0], points[2])], degree - 1, turtle)
 
 
 def main():
